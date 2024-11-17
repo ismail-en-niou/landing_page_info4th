@@ -22,7 +22,7 @@ export const Footer = () => {
           <div>
             <a
               rel="noreferrer noopener"
-              href="#"
+              href="https://www.instagram.com/infom4th/"
               className="opacity-60 hover:opacity-100"
             >
               instagram
@@ -32,7 +32,7 @@ export const Footer = () => {
           <div>
             <a
               rel="noreferrer noopener"
-              href="#"
+              href="https://www.linkedin.com/company/infom4th/?originalSubdomain=ma"
               className="opacity-60 hover:opacity-100"
             >
               linkedin
@@ -42,7 +42,7 @@ export const Footer = () => {
           <div>
             <a
               rel="noreferrer noopener"
-              href="#"
+              href="https://chat.whatsapp.com/Ib3SEN96J21AlCi2fJwzzZ"
               className="opacity-60 hover:opacity-100"
             >
               whatsapp
@@ -55,7 +55,7 @@ export const Footer = () => {
           <div>
             <a
               rel="noreferrer noopener"
-              href="#"
+              href="infom4th.robixe.online"
               className="opacity-60 hover:opacity-100"
             >
               Web
@@ -78,7 +78,7 @@ export const Footer = () => {
           <div>
             <a
               rel="noreferrer noopener"
-              href="#"
+              href="#pricing"
               className="opacity-60 hover:opacity-100"
             >
               Pricing
@@ -88,7 +88,7 @@ export const Footer = () => {
           <div>
             <a
               rel="noreferrer noopener"
-              href="#"
+              href="#faq"
               className="opacity-60 hover:opacity-100"
             >
               FAQ
@@ -101,7 +101,7 @@ export const Footer = () => {
           <div>
             <a
               rel="noreferrer noopener"
-              href="#"
+              href="https://chat.whatsapp.com/Ib3SEN96J21AlCi2fJwzzZ"
               className="opacity-60 hover:opacity-100"
             >
               whatsapp
@@ -111,7 +111,7 @@ export const Footer = () => {
           <div>
             <a
               rel="noreferrer noopener"
-              href="#"
+              href="https://discord.gg/XXQrUycZ"
               className="opacity-60 hover:opacity-100"
             >
               Discord
