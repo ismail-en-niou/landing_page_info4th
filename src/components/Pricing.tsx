@@ -30,8 +30,8 @@ const pricingList: PricingProps[] = [
     popular: 1,
     price: 30,
     description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Start Free Trial",
+    "Ideal for discovering InfoM4th essentials!",
+    buttonText: "Start Trial",
     benefitList: [
         "Events: Free access to member - exclusive events.",
         "Formations & Trainings: Free acess to basic exclusive sessions",
@@ -45,7 +45,7 @@ const pricingList: PricingProps[] = [
       price: 50,
         description:
   "Enjoy priority access and premium features!",
-    buttonText: "Contact US",
+    buttonText: "start Trial",
       benefitList: [
         "Events: Free access to member - exclusive events.",
         "Formations & Trainings: Free acess to all exclusive sessions.",
@@ -72,8 +72,7 @@ export const Pricing = () => {
         Access
       </h2>
       <h3 className="text-xl text-center text-muted-foreground pt-4 pb-8">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-        reiciendis.
+      CHOOSE YOUR MEMBERSHIP
       </h3>
       <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
         {pricingList.map((pricing: PricingProps) => (
