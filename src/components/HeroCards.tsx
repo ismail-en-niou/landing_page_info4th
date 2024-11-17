@@ -66,7 +66,7 @@ export const HeroCards = () => {
 
         <CardFooter className="flex">
           <div className="">
-            {["• Events: Free access to member-exclusive events.", "• Formations & Trainings: Free acess to all exclusive sessions.", "Discounts: 70-100% off advanced sessions.", "Priority: Priority access for limited spots." , "Community: Join a special group for club decisions ."].map(
+            {["Events: Free access to member-exclusive events.", "Formations & Trainings: Free acess to all exclusive sessions.", "Discounts: 70-100% off advanced sessions.", "Priority: Priority access for limited spots." , "Community: Join a special group for club decisions ."].map(
               (benefit: string) => (
                 <span
                   key={benefit}
