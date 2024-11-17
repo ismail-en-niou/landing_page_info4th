@@ -126,10 +126,10 @@ export const Footer = () => {
           <a
             rel="noreferrer noopener"
             target="_blank"
-            href="https://www.linkedin.com/in/ismail-en-niou-898566275/"
+            href="https://www.robixe.online"
             className="text-primary transition-all border-primary hover:border-b-2"
           >
-            ismail en-niou
+            robixe.online
           </a>
         </h3>
       </section>
