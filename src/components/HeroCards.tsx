@@ -1,6 +1,4 @@
-import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { Badge } from "./ui/badge";
-import { Button, buttonVariants } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -59,7 +57,7 @@ export const HeroCards = () => {
         </CardHeader>
 
         <CardContent>
-          <Button className="w-full">Start Your Trial</Button>
+          <button className="w-full">Start Your Trial</button>
         </CardContent>
 
         <hr className="w-4/5 m-auto mb-4" />
