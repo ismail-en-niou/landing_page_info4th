@@ -1,4 +1,5 @@
 import { Badge } from "./ui/badge";
+import { Button} from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -57,7 +58,7 @@ export const HeroCards = () => {
         </CardHeader>
 
         <CardContent>
-          <button className="w-full">Start Your Trial</button>
+          <Button className="w-full">Start Your Trial</Button>
         </CardContent>
 
         <hr className="w-4/5 m-auto mb-4" />
