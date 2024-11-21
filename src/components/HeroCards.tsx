@@ -11,7 +11,7 @@ import {
 import { Check } from "lucide-react";
 import { LightBulbIcon } from "./Icons";
 import { useEffect } from 'react';
-import AOS from 'aos';
+declare module 'aos';
 import 'aos/dist/aos.css';
 
 export const HeroCards = () => {

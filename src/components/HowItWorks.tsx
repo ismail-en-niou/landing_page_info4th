@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { MedalIcon, MapIcon, PlaneIcon, GiftIcon } from "../components/Icons";
 import 'aos/dist/aos.css'; // Import AOS styles
-import AOS from 'aos'; // Import AOS
+declare module 'aos'; // Import AOS
 
 interface FeatureProps {
   icon: JSX.Element;

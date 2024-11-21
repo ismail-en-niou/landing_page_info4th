@@ -1,7 +1,7 @@
 import { Button } from "./ui/button";
 import { HeroCards } from "./HeroCards";
 import { useEffect } from 'react';
-import AOS from 'aos';
+declare module 'aos';
 import 'aos/dist/aos.css';
 
 export const Hero = () => {
