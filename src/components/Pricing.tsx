@@ -11,7 +11,8 @@ import {
 } from "@/components/ui/card";
 import { Check } from "lucide-react";
 import 'aos/dist/aos.css'; // Import AOS styles
-declare module 'aos';
+import AOS from 'aos';
+
 
 enum PopularPlanType {
   NO = 0,
