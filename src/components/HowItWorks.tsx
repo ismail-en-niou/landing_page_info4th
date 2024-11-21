@@ -1,5 +1,8 @@
+import { useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { MedalIcon, MapIcon, PlaneIcon, GiftIcon } from "../components/Icons";
+import 'aos/dist/aos.css'; // Import AOS styles
+import AOS from 'aos'; // Import AOS
 
 interface FeatureProps {
   icon: JSX.Element;
@@ -35,12 +38,17 @@ const features: FeatureProps[] = [
 ];
 
 export const HowItWorks = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Optional: Animation duration
+      easing: 'ease-in-out', // Optional: Easing function
+      once: true, // Optional: Trigger animation only once
+    });
+  }, []);
+
   return (
-    <section
-      id="howItWorks"
-      className="container text-center py-24 sm:py-32"
-    >
-      <h2 className="text-3xl md:text-4xl font-bold ">
+    <section id="howItWorks" className="container text-center py-24 sm:py-32">
+      <h2 className="text-3xl md:text-4xl font-bold">
         How It{" "}
         <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
           Works{" "}
@@ -56,7 +64,8 @@ export const HowItWorks = () => {
         {features.map(({ icon, title, description }: FeatureProps) => (
           <Card
             key={title}
-            className="bg-muted/50"
+            className="bg-muted/50 hover:scale-105 hover:shadow-lg transition-transform duration-200"
+            data-aos="fade-up" // Add your AOS animation type here
           >
             <CardHeader>
               <CardTitle className="grid gap-4 place-items-center">

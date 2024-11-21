@@ -5,18 +5,9 @@ export const Statistics = () => {
   }
 
   const stats: statsProps[] = [
-    {
-      quantity: "70+",
-      description: "menbers",
-    },
-    {
-      quantity: "20+",
-      description: "formation",
-    },
-    {
-      quantity: "20+",
-      description: "events",
-    },
+    { quantity: "70+", description: "members" },
+    { quantity: "20+", description: "formations" },
+    { quantity: "20+", description: "events" },
   ];
 
   return (
@@ -25,9 +16,10 @@ export const Statistics = () => {
         {stats.map(({ quantity, description }: statsProps) => (
           <div
             key={description}
+            data-aos="fade-up"  // AOS animation trigger
             className="space-y-2 text-center"
           >
-            <h2 className="text-3xl sm:text-4xl font-bold ">{quantity}</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold">{quantity}</h2>
             <p className="text-xl text-muted-foreground">{description}</p>
           </div>
         ))}

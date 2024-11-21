@@ -1,11 +1,5 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { motion } from "framer-motion"; // Import framer-motion for smooth animations
 
 interface TeamProps {
   imageUrl: string;
@@ -19,7 +13,7 @@ const teamList: TeamProps[] = [
     imageUrl: "./club/1.jpg",
     name: "HAMZA ZEROUK",
     position: "Photographer",
-    description: "Captures stunning visuals to highlight the essence of our events and projects."
+    description: "Captures stunning visuals to highlight the essence of our events."
   },
   {
     imageUrl: "./club/13.jpg",
@@ -31,19 +25,19 @@ const teamList: TeamProps[] = [
     imageUrl: "./club/2.jpg",
     name: "HICHAM HARED",
     position: "Media Cell Leader",
-    description: "Leads the media team to ensure impactful communication and branding."
+    description: "Leads the media team to ensure impactful communication."
   },
   {
     imageUrl: "./club/3.jpg",
     name: "MALIKA EL ABDERRAHMANI",
     position: "Conference Officer",
-    description: "Coordinates conferences and ensures seamless event execution."
+    description: "Coordinates conferences seamless event execution."
   },
   {
     imageUrl: "./club/4.jpg",
     name: "Zakaria El Aloouche",
     position: "Community Manager",
-    description: "Engages with our audience and fosters a strong sense of community."
+    description: "Engages with our audience a strong sense of community."
   },
   {
     imageUrl: "./club/5.jpg",
@@ -61,7 +55,7 @@ const teamList: TeamProps[] = [
     imageUrl: "./club/7.jpg",
     name: "Fatima El Asri",
     position: "Communications Officer",
-    description: "Handles internal and external communication to ensure clarity and alignment."
+    description: "Handles internal and external communication to ensure clarity."
   },
   {
     imageUrl: "./club/9.jpg",
@@ -103,28 +97,34 @@ export const Team = () => {
         Meet the dedicated minds behind InfoMath! Our team of innovators and tech enthusiasts is committed to driving creativity, collaboration, and growth in the digital space. Together, we turn ideas into impactful solutions.
       </p>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 gap-y-10">
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 gap-y-10" >
         {teamList.map(({ imageUrl, name, position, description }: TeamProps) => (
-          <Card
+          <motion.div
+            
             key={name}
             className="bg-muted/50 relative mt-8 flex flex-col justify-center items-center"
+            initial={{ opacity: 0, scale: 0.8 }}  // Initial state (fade in and scale down)
+            animate={{ opacity: 1, scale: 1 }}    // Final state (fade in and scale up)
+            transition={{ duration: 0.5 }}         // Duration of the animation
           >
-            <CardHeader className="mt-8 flex justify-center items-center pb-2">
-              <img
-                src={imageUrl}
-                alt={`${name} ${position}`}
-                className="absolute -top-12 rounded-full w-24 h-24 aspect-square object-cover"
-              />
-              <CardTitle className="text-center">{name}</CardTitle>
-              <CardDescription className="text-primary">{position}</CardDescription>
-            </CardHeader>
+            <Card className="flex flex-col justify-center items-center" data-aos="fade-up">
+              <CardHeader className="mt-8 flex justify-center items-center pb-2">
+                <img
+                  src={imageUrl}
+                  alt={`${name} ${position}`}
+                  className="absolute -top-12 rounded-full w-24 h-24 aspect-square object-cover"
+                />
+                <CardTitle className="text-center">{name}</CardTitle>
+                <CardDescription className="text-primary">{position}</CardDescription>
+              </CardHeader>
 
-            <CardContent className="text-center pb-2">
-              <p>{description}</p>
-            </CardContent>
+              <CardContent className="text-center pb-2">
+                <p>{description}</p>
+              </CardContent>
 
-            <CardFooter></CardFooter>
-          </Card>
+              <CardFooter></CardFooter>
+            </Card>
+          </motion.div>
         ))}
       </div>
     </section>

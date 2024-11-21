@@ -1,5 +1,5 @@
 import { Badge } from "./ui/badge";
-import { Button} from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -8,14 +8,28 @@ import {
   CardTitle,
   CardFooter,
 } from "@/components/ui/card";
-import { Check} from "lucide-react";
+import { Check } from "lucide-react";
 import { LightBulbIcon } from "./Icons";
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export const HeroCards = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true,
+    });
+  }, []);
+
   return (
     <div className="hidden lg:flex flex-row flex-wrap gap-8 relative w-[700px] h-[500px]">
       {/* Team */}
-      <Card className="absolute right-[20px] top-4 w-80 flex flex-col justify-center items-center drop-shadow-xl shadow-black/10 dark:shadow-white/10">
+      <Card
+        data-aos="fade-up"
+        className="absolute right-[20px] top-4 w-80 flex flex-col justify-center items-center drop-shadow-xl shadow-black/10 dark:shadow-white/10"
+      >
         <CardHeader className="mt-8 flex justify-center items-center pb-2">
           <img
             src="./Logo.png"
@@ -37,14 +51,14 @@ export const HeroCards = () => {
       </Card>
 
       {/* Pricing */}
-      <Card className="absolute top-[150px] left-[50px] w-72  drop-shadow-xl shadow-black/10 dark:shadow-white/10">
+      <Card
+        data-aos="fade-up"
+        className="absolute top-[150px] left-[50px] w-72 drop-shadow-xl shadow-black/10 dark:shadow-white/10"
+      >
         <CardHeader>
           <CardTitle className="flex item-center justify-between">
             VIP
-            <Badge
-              variant="secondary"
-              className="text-sm text-primary"
-            >
+            <Badge variant="secondary" className="text-sm text-primary">
               Most popular
             </Badge>
           </CardTitle>
@@ -52,8 +66,8 @@ export const HeroCards = () => {
             <span className="text-3xl font-bold">50DH</span>
           </div>
           <CardDescription>
-          We’re excited to invite you to become part of InfoM4ath! 🎉
-          Don’t miss out on member-exclusive events, trainings, and much more!
+            We’re excited to invite you to become part of InfoM4ath! 🎉
+            Don’t miss out on member-exclusive events, trainings, and much more!
           </CardDescription>
         </CardHeader>
 
@@ -65,23 +79,27 @@ export const HeroCards = () => {
 
         <CardFooter className="flex">
           <div className="">
-            {["Events: Free access to member-exclusive events.", "Formations & Trainings: Free acess to all exclusive sessions.", "Discounts: 70-100% off advanced sessions.", "Priority: Priority access for limited spots." , "Community: Join a special group for club decisions ."].map(
-              (benefit: string) => (
-                <span
-                  key={benefit}
-                  className="flex"
-                >
-                  <Check className="text-green-500" />{" "}
-                  <h3 className="ml-2">{benefit}</h3>
-                </span>
-              )
-            )}
+            {[
+              "Events: Free access to member-exclusive events.",
+              "Formations & Trainings: Free access to all exclusive sessions.",
+              "Discounts: 70-100% off advanced sessions.",
+              "Priority: Priority access for limited spots.",
+              "Community: Join a special group for club decisions.",
+            ].map((benefit: string) => (
+              <span key={benefit} className="flex">
+                <Check className="text-green-500" />{" "}
+                <h3 className="ml-2">{benefit}</h3>
+              </span>
+            ))}
           </div>
         </CardFooter>
       </Card>
 
       {/* Service */}
-      <Card className="absolute w-[350px] -right-[10px] bottom-[35px]  drop-shadow-xl shadow-black/10 dark:shadow-white/10">
+      <Card
+        data-aos="fade-up"
+        className="absolute w-[350px] -right-[10px] bottom-[35px] drop-shadow-xl shadow-black/10 dark:shadow-white/10"
+      >
         <CardHeader className="space-y-1 flex md:flex-row justify-start items-start gap-4">
           <div className="mt-1 bg-primary/20 p-1 rounded-2xl">
             <LightBulbIcon />
@@ -98,3 +116,4 @@ export const HeroCards = () => {
     </div>
   );
 };
+
