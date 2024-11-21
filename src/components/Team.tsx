@@ -22,6 +22,12 @@ const teamList: TeamProps[] = [
     description: "Captures stunning visuals to highlight the essence of our events and projects."
   },
   {
+    imageUrl: "./club/13.jpg",
+    name: "HIBA HAZIM",
+    position: "Designer",
+    description: "Creates visually appealing designs that embody our brand's identity."
+  },
+  {
     imageUrl: "./club/2.jpg",
     name: "HICHAM HARED",
     position: "Media Cell Leader",
@@ -80,12 +86,6 @@ const teamList: TeamProps[] = [
     name: "AYA AJBAR",
     position: "Media Manager",
     description: "Develops creative media content to showcase our vision and activities."
-  },
-  {
-    imageUrl: "./club/13.jpg",
-    name: "HIBA HAZIM",
-    position: "Designer",
-    description: "Creates visually appealing designs that embody our brand's identity."
   },
 ];
 
